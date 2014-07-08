@@ -16,6 +16,14 @@ ActiveRecord::Schema.define(version: 20140606162831) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "choices", force: true do |t|
+    t.integer  "question_id"
+    t.string   "choice"
+    t.boolean  "is_correct"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "comments", force: true do |t|
     t.text     "content",    null: false
     t.integer  "song_id"
@@ -23,6 +31,28 @@ ActiveRecord::Schema.define(version: 20140606162831) do
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "questions", force: true do |t|
+    t.integer  "quiz_id"
+    t.string   "question"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "quizzes", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "simple_sessions", force: true do |t|
+    t.string   "session_key"
+    t.integer  "last_answered_question_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "num_correct"
+    t.integer  "num_incorrect"
   end
 
   create_table "songs", force: true do |t|
