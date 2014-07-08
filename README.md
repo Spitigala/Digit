@@ -6,8 +6,8 @@ You are the tastemaker. Up-vote/down-vote music.
 - Original Github Repo: https://github.com/girb0t/diggit
 - Heroku: http://dbc-digit.herokuapp.com/
 
-About this app:
-===============
+##About this app:
+
 
 This is a simple music voting app that uses the soundcloud API. Users can add new tracks, and anyone can upvote/downvote any track.
 
@@ -43,8 +43,8 @@ rake db:seed
 6. After seeding, start the rails server ('rails s'), and navigate to localhost:3000 to use the app.
 
 
-Git workflow:
-=============
+##Git workflow:
+
 
 git checkout development
 git checkout -b "your branch name" development
