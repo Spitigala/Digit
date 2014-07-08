@@ -22,7 +22,9 @@ Team Members:
 How to run it:
 
 1. Clone down the repo.
+
 2. In the config folder, there is a file named dbsetup.yml. Create a new file within the same directory called database.yml, and then copy and paste the DB configuration from dbsetup.yml in to the new database.yml file.
+
 3. Go in to the Config > Initializers folder and create a new file called secret_token.rb. In this file, write the following:
 
 ```ruby
@@ -47,11 +49,11 @@ rake db:seed
 ##Git workflow:
 
 
-git checkout development
-git checkout -b "your branch name" development
-make changes
-git push origin "your branch"
-create a pull request to the development branch
+- git checkout development
+- git checkout -b "your branch name" development
+- make changes
+- git push origin "your branch"
+- create a pull request to the development branch
 
 Changes will be merged to master branch after being tested in development.
 
