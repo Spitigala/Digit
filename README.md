@@ -13,10 +13,10 @@ This is a simple music voting app that uses the soundcloud API. Users can add ne
 
 Team Members:
 
--Connor Harwood
--Sahan Pitigala
--Tuan Duong
--Pei Xiong Liu
+- Connor Harwood
+- Sahan Pitigala
+- Tuan Duong
+- Pei Xiong Liu
 
 
 How to run it:
@@ -35,10 +35,11 @@ Diggit::Application.config.secret_key_base = 'your-key'
 
 5. Run the following commands in this exact order:
 
+```ruby
 rake db:create:all
 rake db:migrate
 rake db:seed
-
+```
 
 6. After seeding, start the rails server ('rails s'), and navigate to localhost:3000 to use the app.
 
